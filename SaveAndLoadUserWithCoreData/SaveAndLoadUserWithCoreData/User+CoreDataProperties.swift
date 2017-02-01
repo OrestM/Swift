@@ -1,0 +1,22 @@
+//
+//  User+CoreDataProperties.swift
+//  SaveAndLoadUserWithCoreData
+//
+//  Created by Orest Mykha on 12/16/16.
+//  Copyright © 2016 Orest Mykha. All rights reserved.
+//
+
+import Foundation
+import CoreData
+
+
+extension User {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
+        return NSFetchRequest<User>(entityName: "User");
+    }
+
+    @NSManaged public var userName: String?
+    @NSManaged public var userPassword: String?
+
+}
