@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dd3-GT-ZJb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="qTK-wT-e1S">
+            <objects>
+                <tableViewController id="dd3-GT-ZJb" customClass="TableViewController" customModule="TableViewResising" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="309" sectionHeaderHeight="28" sectionFooterHeight="28" id="bK2-Tc-1eW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="309" id="gh5-ca-jBS">
+                                <rect key="frame" x="0.0" y="28" width="375" height="309"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gh5-ca-jBS" id="nEg-bg-7L3">
+                                    <frame key="frameInset" width="375" height="308"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Jd-W5-21N">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-3y-yAf">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="82" id="dwn-d9-qQ7"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sel-7t-QSq">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="LIO-Lc-qpu"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Tj0-3y-yAf" firstAttribute="leading" secondItem="nEg-bg-7L3" secondAttribute="leadingMargin" constant="-8" id="6WX-lZ-hWw"/>
+                                        <constraint firstAttribute="topMargin" secondItem="Tj0-3y-yAf" secondAttribute="top" id="I6s-wv-MqU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Tj0-3y-yAf" secondAttribute="trailing" constant="-8" id="IYo-BU-D3y"/>
+                                        <constraint firstItem="Sel-7t-QSq" firstAttribute="leading" secondItem="nEg-bg-7L3" secondAttribute="leadingMargin" constant="-8" id="N7X-M5-Ge5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7Jd-W5-21N" secondAttribute="trailing" constant="-8" id="Xpo-7H-kAz"/>
+                                        <constraint firstItem="Sel-7t-QSq" firstAttribute="top" secondItem="Tj0-3y-yAf" secondAttribute="bottom" constant="20" id="eUG-nA-EXT"/>
+                                        <constraint firstItem="7Jd-W5-21N" firstAttribute="leading" secondItem="nEg-bg-7L3" secondAttribute="leadingMargin" constant="-8" id="fOr-1j-r7I"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Sel-7t-QSq" secondAttribute="trailing" constant="-8" id="nwt-J8-8tf"/>
+                                        <constraint firstItem="7Jd-W5-21N" firstAttribute="top" secondItem="Sel-7t-QSq" secondAttribute="bottom" constant="16" id="r1R-62-u8t"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7Jd-W5-21N" secondAttribute="bottom" id="xbS-66-is2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dd3-GT-ZJb" id="dUD-ys-eCt"/>
+                            <outlet property="delegate" destination="dd3-GT-ZJb" id="sIi-jh-qfE"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzf-BT-ROW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+</document>
