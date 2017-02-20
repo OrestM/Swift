@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var name:  UILabel!
     
     var index = 0
-    var arrayAnimal = []
+    var arrayAnimal = [Any]()
     
     var currentAnimal: OMAnimal!
     
@@ -23,22 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let dog = OMDog(name: "Buldog", age: 4, color: "Black")
-    
-        name.text  = dog.name
-        age.text   = String(dog.age)
-        color.text = dog.color
-        
         let cat = OMCat(name: "Duska", age: 2, color: "White")
-        
-        name.text  = cat.name
-        age.text   = String(cat.age)
-        color.text = cat.color
-        
         let monkey = OMMonkey(name: "Jimbo", age: 5, color: "White")
-        
-        name.text  = monkey.name
-        age.text   = String(monkey.age)
-        color.text = monkey.color
         
         arrayAnimal = [dog, cat, monkey]
         
@@ -47,6 +33,7 @@ class ViewController: UIViewController {
 
     func updateAnimal() {
         
+        // Get animal with correct index
         currentAnimal = arrayAnimal[index] as! OMAnimal
         
         name.text  = currentAnimal.name
@@ -55,13 +42,13 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func next(sender: UIButton) {
+    @IBAction func next(_ sender: UIButton) {
         
-        index++
+        index += 1
         
         if index == arrayAnimal.count {
             
-            index = arrayAnimal.count - 1
+            index -= 1
             
         }
         
@@ -69,24 +56,21 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func previous(sender: UIButton) {
+    @IBAction func previous(_ sender: UIButton) {
         
-        index--
+        index -= 1
         
         if index == -1 {
             
-            index++
-            updateAnimal()
+            index += 1
             
         }
         
         updateAnimal()
         
-        
-        
     }
     
-    @IBAction func voice(sender: UIButton) {
+    @IBAction func voice(_ sender: UIButton) {
     
         currentAnimal = arrayAnimal[index] as! OMAnimal
         

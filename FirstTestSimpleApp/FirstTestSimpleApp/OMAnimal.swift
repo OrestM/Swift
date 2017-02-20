@@ -10,9 +10,9 @@ import UIKit
 
 class OMAnimal: NSObject {
     
-    let name:  String!
-    let age:   NSInteger!
-    let color: String!
+    let name: String
+    let age: NSInteger
+    let color: String
 
     init(name: String, age: NSInteger, color: String) {
         self.name  = name
